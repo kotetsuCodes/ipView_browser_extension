@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "ipView",
+  "version": "1.0",
+  "author": "CB",
+  "description": "Displays IP Address of current website",
+  "icons": {
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "content_scripts/ipView.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "webRequest",
+    "tabs",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  }
+}
